@@ -29,6 +29,7 @@
 
   <dependencies>
 
+    <!--dependência que 'trabalha' com o banco de dados-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -39,6 +40,7 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
+    <!--Dependência para REST API -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
@@ -46,18 +48,21 @@
       <optional>true</optional>
     </dependency>
 
+    <!--Dependência para banco de dados local -->
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
       <scope>runtime</scope>
     </dependency>
 
+    <!--Facilitador para gerar get, set @toString, @hasCode, etc -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <optional>true</optional>
     </dependency>
 
+    <!--Dependência implementação de testes -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
