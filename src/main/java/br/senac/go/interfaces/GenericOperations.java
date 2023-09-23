@@ -12,6 +12,9 @@ public interface GenericOperations<T,N> {
     T create(T entity);
     T read(T entity);
     T readById(N id);
+
     T update(T entity);
+    T updatePart(N id, T entity);
+    T updateFull(N id, T entity);
     void delete(N id);
 }

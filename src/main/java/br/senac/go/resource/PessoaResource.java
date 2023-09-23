@@ -7,7 +7,8 @@ import io.swagger.v3.oas.annotations.tags.Tags;
 import org.springframework.web.bind.annotation.*;
 
 
-@RestController("api/pessoa")
+@RestController //Fala que o controlador vai trabalhar com REST
+@RequestMapping(path = "/api/pessoa")
 @Tag(name = "pessoa", description = "documentação da classe pessoa")
 public class PessoaResource implements IResource<Pessoa, Integer> {
     @Override
@@ -31,6 +32,16 @@ public class PessoaResource implements IResource<Pessoa, Integer> {
     @Override
     @PutMapping
     public Pessoa update(Pessoa entity) {
+        return null;
+    }
+
+    @Override
+    public Pessoa updatePart(Integer id, Pessoa entity) {
+        return null;
+    }
+
+    @Override
+    public Pessoa updateFull(Integer id, Pessoa entity) {
         return null;
     }
 
