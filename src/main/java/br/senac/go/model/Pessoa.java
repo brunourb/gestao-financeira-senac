@@ -20,4 +20,7 @@ public class Pessoa {
 
     @Column(name = "ENDERECO") //nomea o nome da coluna para MAIÚSCULO
     private String endereco;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Carteira carteira;
 }
