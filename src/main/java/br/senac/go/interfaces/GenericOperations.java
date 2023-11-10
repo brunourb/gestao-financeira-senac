@@ -13,7 +13,7 @@ public interface GenericOperations<T,N> {
     T read(T entity) throws Exception;
     T readById(N id) throws Exception;
 
-    T update(T entity);
+    T update(T entity) throws Exception;
     T updatePart(N id, T entity) throws Exception;
     T updateFull(N id, T entity);
     void delete(N id);

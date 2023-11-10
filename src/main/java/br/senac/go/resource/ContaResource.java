@@ -123,7 +123,7 @@ public class ContaResource implements IResource<Conta,Integer> {
             @ApiResponse(responseCode = "303", content = { @Content(schema = @Schema()) }),
             @ApiResponse(responseCode = "404", content = { @Content(schema = @Schema()) }),
             @ApiResponse(responseCode = "500", content = { @Content(schema = @Schema()) }) })
-    public Conta update(@Valid @RequestBody Conta entity) {
+    public Conta update(@Valid @RequestBody Conta entity) throws Exception {
         log.info("Executado método ContaResource.update");
         //log.debug("Executado método ContaResource.create com os seguinte valores:"+entity);
         log.debug(String.format("Executado método ContaResource.update | valores: %s",entity.toString()));
