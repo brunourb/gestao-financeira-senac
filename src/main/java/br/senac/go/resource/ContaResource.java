@@ -33,6 +33,11 @@ public class ContaResource implements IResource<Conta,Integer> {
     @Autowired //forma 01
     ContaService contaService;
 
+
+    /*public ContaResource(ContaService contaService){
+        this.contaService = contaService;
+    }*/
+
     @Override
     @PostMapping(
             consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},

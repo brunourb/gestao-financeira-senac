@@ -17,7 +17,7 @@ public interface IService<T,N> {
 
     public T read(T entity) throws Exception;
 
-    public T update(T entity);
+    public T update(T entity) throws Exception;
 
     public T updatePart(N id, T entity) throws Exception;
 
