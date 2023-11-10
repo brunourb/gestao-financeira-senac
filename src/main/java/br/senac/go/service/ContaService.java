@@ -9,6 +9,7 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 
+import java.awt.event.ContainerEvent;
 import java.util.List;
 import java.util.Optional;
 
@@ -65,8 +66,14 @@ public class ContaService implements IService<Conta,Integer> {
 
         Conta contaExistente = this.read(entity);
 
+        //}forma de atualizar os objetos
+        //TODO
+        contaExistente.setDataFim(entity.getDataFim()); //tratar get para objeto nulo
+        contaExistente.setDataInicio(entity.getDataInicio());
+        contaExistente.setDescricao(entity.getDescricao());
+
         contaRepository.save(contaExistente);
-        return null;
+        return contaExistente;
     }
 
     @Override
